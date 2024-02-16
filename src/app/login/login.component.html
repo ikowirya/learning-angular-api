@@ -2,22 +2,26 @@
   <form
     #user="ngForm"
     (ngSubmit)="onSubmit(user)"
-    class="flex flex-col gap-3 mt-15 bg-teal-600 rounded-lg px-20 pb-14 pt-14"
+    class="flex flex-col gap-3 mt-15 bg-gray-100 rounded-xl px-20 pb-14 pt-14"
   >
-    <span class="text-white">Username</span>
+    <span class="text-black">Username</span>
     <input
       ngModel
       type="text"
       name="username"
+      required
       class="1 border-solid rounded-md p-1 w-72"
     />
-    <span class="text-white">Password</span>
+    <span class="text-black">Password</span>
     <input
       ngModel
       type="password"
       name="password"
+      required
       class="border-solid rounded-md p-1 w-72"
     />
-    <button class="bg-white text-teal-600 rounded-lg border-none pt-1 pb-1 mt-1">Submit</button>
+    <button class="bg-teal-600 text-white rounded-lg border-none pt-1 pb-1 mt-1">Sign In</button>
   </form>
 </div>
+{{user | json}}
+{{user.valid}}
