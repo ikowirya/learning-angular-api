@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'jikan-app';
-  handleChange(value: boolean) {
-
+  isLogin: boolean;
+  constructor(private service:AuthService){
+    this.isLogin = !!this.service.getAuth();
   }
 }

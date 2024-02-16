@@ -1,5 +1,5 @@
 <ng-template #loading class="p-3"> Loading... </ng-template>
-<div *ngIf="manga$ | async as mangas; else loading" class="flex gap-4 flex-wrap p-5 justify-center">
+<div *ngIf="manga$ | async as mangas; else loading" class="flex gap-4 flex-wrap justify-center  pt-7 pr-7 pl-7">
   <div *ngFor="let manga of mangas" class="w-40">
     <a [routerLink]="['../',manga.mal_id.toString()]">
       <img [src]="manga.images.webp.image_url" class="h-64"/>
