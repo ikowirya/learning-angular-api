@@ -1,0 +1,10 @@
+<nav
+  class="bg-teal-600 text-white flex justify-around p-4"
+>
+  <div class="flex gap-8">
+    <a [routerLink]="['anime', 'list']"><button>Anime</button></a>
+    <a [routerLink]="['manga']"><button>Manga</button></a>
+  </div>
+  <a [routerLink]="['login']"><button>Login</button></a>
+</nav>
+<router-outlet />
